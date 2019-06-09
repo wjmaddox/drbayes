@@ -1,0 +1,7 @@
+[paths]
+#data_path = /share/nikola/export/wm326/bb_data
+data_path = ./data/
+results_path = ./results/results.db
+
+[seeds]
+seed = 0

@@ -170,4 +170,4 @@ Please see the paper for more detailed results.
 
 ## Baselines
 
-See [SWAG repo](https://github.com/wjmaddox) for implementations of SWAG and other baselines.
+See [SWAG repo](https://github.com/wjmaddox/swa_gaussian) for implementations of SWAG and other baselines.

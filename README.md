@@ -101,7 +101,7 @@ Please refer to the [`README`](experiments/cifar_exps/README.md) for more detail
 
 ### UCI Regression
 
-The folder [`experiments/exps_uci`](experiments/exps_uci) contains implementations of the subspace inference procedure 
+The folder [`experiments/uci_exps`](experiments/uci_exps) contains implementations of the subspace inference procedure 
 for UCI regression problems.
 
 <p align="center">

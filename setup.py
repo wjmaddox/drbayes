@@ -21,7 +21,6 @@ setup(
         'setuptools>=39.1.0',
         'matplotlib>=2.2.2',
         'torch>=1.0.0',
-        'Pillow>=5.4.1',
         'scikit_learn>=0.20.2',
    ],
     include_package_data=True,

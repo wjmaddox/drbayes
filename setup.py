@@ -21,7 +21,9 @@ setup(
         'setuptools>=39.1.0',
         'matplotlib>=2.2.2',
         'torch>=1.0.0',
-        'scikit_learn>=0.20.2',
+        'scikit_learn==0.20.2',
+        'seaborn',
+        'pyro-ppl'
    ],
     include_package_data=True,
     classifiers=[

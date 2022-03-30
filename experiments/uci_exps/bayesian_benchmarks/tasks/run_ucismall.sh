@@ -124,17 +124,19 @@ for split in {1..20}; do
     --database_path results_small.db \
     --swag --swag_lr 1e-3 --subspace pca --swag_start 500 --inference low_rank_gaussian
 
+# see https://github.com/wjmaddox/drbayes/issues/5 for further details but it looks like the original weight decay
+# reported was wrong. we use 1e-3 here, but 1e-4 could also work.
 # yacht SGD
     python3 swag_regression.py --uci-small --dataset yacht --model_variance \
     --dir test --split $split --epochs 1000 --batch_size 30 \
-    --lr_init 1e-3 --noise_var --model_variance --no_schedule --wd 1e-1 \
+    --lr_init 1e-3 --noise_var --model_variance --no_schedule --wd 1e-3 \
     --database_path results_small.db
 
 # yacht ESS
     python3 swag_regression.py \
     --uci-small --dataset yacht --model_variance \
     --dir test --split $split --epochs 1000 --batch_size 30 \
-    --lr_init 1e-3 --noise_var --model_variance --no_schedule --wd 1e-1 \
+    --lr_init 1e-3 --noise_var --model_variance --no_schedule --wd 1e-3 \
     --database_path results_small.db \
     --swag --swag_lr 1e-3 --subspace pca --swag_start 500 --inference ess
 
@@ -142,7 +144,7 @@ for split in {1..20}; do
     python3 swag_regression.py \
     --uci-small --dataset yacht --model_variance \
     --dir test --split $split --epochs 1000 --batch_size 30 \
-    --lr_init 1e-3 --noise_var --model_variance --no_schedule --wd 1e-1 \
+    --lr_init 1e-3 --noise_var --model_variance --no_schedule --wd 1e-3 \
     --database_path results_small.db \
     --swag --swag_lr 1e-3 --subspace pca --swag_start 500 --inference vi
 
@@ -150,7 +152,7 @@ for split in {1..20}; do
     python3 swag_regression.py \
     --uci-small --dataset yacht --model_variance \
     --dir test --split $split --epochs 1000 --batch_size 30 \
-    --lr_init 1e-3 --noise_var --model_variance --no_schedule --wd 1e-1 \
+    --lr_init 1e-3 --noise_var --model_variance --no_schedule --wd 1e-3 \
     --database_path results_small.db \
     --swag --swag_lr 1e-3 --subspace pca --swag_start 500 --inference low_rank_gaussian
     
